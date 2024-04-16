@@ -1,0 +1,32 @@
+[
+  {
+    "src": "images/facility/canteen.jpg",
+    "title": "Canteen",
+    "count": "2"
+  },
+  {
+    "src": "images/facility/classroom.jpg",
+    "title": "Classroom",
+    "count": "20"
+  },
+  {
+    "src": "images/facility/lab.jpg",
+    "title": "Computer Lab",
+    "count": "6"
+  },
+  {
+    "src": "images/facility/field.jpg",
+    "title": "Field",
+    "count": "2"
+  },
+  {
+    "src": "images/facility/library.jpg",
+    "title": "Library",
+    "count": "1"
+  },
+  {
+    "src": "images/facility/mosque.jpg",
+    "title": "Mosque",
+    "count": "1"
+  }
+]

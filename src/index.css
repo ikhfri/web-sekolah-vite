@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .news-card {
+    max-width: 350px;
+    width: 100%;
+    overflow: hidden;
+    @apply bg-light-two;
+    transition: 0.3s;
+    position: relative;
+    border-radius: 12px;
+    max-height: 350px;
+  }
+  .news-card:after {
+    content: "";
+    position: absolute;
+    width: 1100%;
+    height: 0px;
+    bottom: 0;
+    left: 0;
+    @apply bg-main-color;
+    transition: 0.3s;
+  }
+  .news-card:hover .news-image img {
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+  .news-card:hover {
+    box-shadow: 5px 5px 5px rgba(33, 33, 33, 0.356);
+    transform: translateY(-15px);
+    cursor: pointer;
+  }
+  .news-image {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+  }
+  .news-image img {
+    position: absolute;
+    height: 125%;
+    width: initial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+  }
+  .title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
+  .title:after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 5px;
+    border-radius: 3px;
+    @apply bg-main-color;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .filter-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0.45rem 0.4rem;
+    padding: 0.85rem 1.8rem;
+    @apply text-light-one;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: 0.3s;
+  }
+
+  .filter-btn.active {
+    @apply bg-light-one;
+    @apply text-main-color;
+  }
+  @media (max-width: 1280px) {
+    .news-card {
+      max-width: 315px;
+    }
+    .news-image {
+      height: 200px;
+    }
+    .title {
+      font-size: 2.1rem;
+      padding-bottom: 0.65rem;
+    }
+    .title:before {
+      margin-bottom: 0.2rem;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+    .title:after {
+      height: 3.5px;
+      width: 70px;
+    }
+  }
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.btn-hover-red:hover .span-hover-red {
+  background-image: url("../public/images/home/play-red.svg");
+}
+.btn-hover-white:hover .span-hover-white {
+  background-image: url("../public/images/home/play-white.svg");
+}
+
+/* Extracurricular start */
+
+.extra-card {
+  max-width: 350px;
+  width: 100%;
+  overflow: hidden;
+
+  transition: 0.3s;
+  position: relative;
+  border-radius: 12px;
+  max-height: 350px;
+}
+.extra-card:after {
+  content: "";
+  position: absolute;
+  width: 1100%;
+  height: 0px;
+  bottom: 0;
+  left: 0;
+
+  transition: 0.3s;
+}
+.extra-card:hover .extra-image img {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+.extra-card:hover {
+  transform: translateY(-15px);
+  cursor: pointer;
+}
+.extra-image {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Extracurricular End */
+
+/* Responsive Extracurricular Start */
+
+/* @media screen and (min-width:100px) and (max-width: 640px) {
+  .extra-card {
+    max-width: 125px;
+    width: 100%;
+  }
+} */
+
+
+/* Responsive Extracurricular end */
+
+/* Majority & Facility start */
+@layer components {
+  .majority-card:hover img,
+  .facility-card:hover img {
+    transform: scale(1.25) rotate(10deg);
+  }
+  .majority-card:hover,
+  .facility-card:hover {
+    box-shadow: 5px 5px 5px rgba(33, 33, 33, 0.356);
+    transform: translateY(-15px);
+  }
+}
+/* Majority & Facility end */
+
+/* Curriculum start */
+.teachers-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  box-shadow: 10px 10px 15px #db1514;
+}
+
+.curriculum .curriculum-child a:hover {
+  text-decoration: underline;
+}
+
+.curriculum-child {
+  display: none;
+  background-color: rgba(237, 237, 237, 0.8);
+  border-radius: 10px;
+  min-width: 200px;
+  margin-top: 9rem;
+  text-align: center;
+}
+
+.curriculum-child a {
+  color: #171717;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.curriculum .icon-down {
+  width: 0.5rem;
+  filter: invert(100%) sepia(0%) saturate(406%) hue-rotate(263deg) brightness(120%) contrast(100%);
+}
+
+.curriculum:hover .icon-down {
+  filter: invert(12%) sepia(100%) saturate(4778%) hue-rotate(338deg) brightness(86%) contrast(106%);
+}
+
+.curriculum:hover .curriculum-child {
+  display: block;
+  color: #171717;
+  position: absolute;
+}
+
+.kesiswaan .kesiswaan-child a:hover {
+  text-decoration: underline;
+}
+
+.kesiswaan-child {
+  display: none;
+  background-color: rgba(237, 237, 237, 0.8);
+  border-radius: 10px;
+  min-width: 200px;
+  margin-top: 9rem;
+  text-align: center;
+}
+
+.kesiswaan-child a {
+  color: #171717;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.kesiswaan .icon-down {
+  width: 0.5rem;
+  filter: invert(100%) sepia(0%) saturate(406%) hue-rotate(263deg) brightness(120%) contrast(100%);
+}
+
+.kesiswaan:hover .icon-down {
+  filter: invert(12%) sepia(100%) saturate(4778%) hue-rotate(338deg) brightness(86%) contrast(106%);
+}
+
+.kesiswaan:hover .kesiswaan-child {
+  display: block;
+  color: #171717;
+  position: absolute;
+}

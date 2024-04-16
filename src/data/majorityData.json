@@ -1,0 +1,17 @@
+[
+  {
+    "src": "images/majority/img1.jpeg",
+    "title": "Web Development",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia"
+  },
+  {
+    "src": "images/majority/img2.png",
+    "title": "Cyber Security",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia"
+  },
+  {
+    "src": "images/majority/img3.png",
+    "title": "App Development",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia"
+  }
+]
