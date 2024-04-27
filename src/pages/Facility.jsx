@@ -11,7 +11,7 @@ const Facility = () => {
           <h3 className="title text-light-one before:text-light-one after:bg-light-one after:w-[200px]">FACILITY</h3>
         </div>
       </div>
-      <div className="w-full lg:my-8 my-3 grid grid-cols-3 place-items-center">
+      <div className="w-full lg:my-8 my-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  place-items-center">
         {FacilityData.map((facilityData) => {
           return <FacilityCard src={facilityData.src} title={facilityData.title} count={facilityData.count} />;
         })}
